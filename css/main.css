@@ -1,0 +1,42 @@
+.nav {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    /* justify-content: space-between; */
+}
+/* .nav > * {
+    display: flex;
+} */
+.nav > .nav-left {
+    width: 70%;
+    display: flex;
+}
+.nav > .nav-left > #logo{
+    width: 5%;
+    height: 30px;
+    width: 30px;
+    background-image: url(https://brasol.vn/public/ckeditor/uploads/tin-tuc/brasol.vn-logo-instargram-logo-instagram-vector.png?fbclid=IwAR3HCJB5jq2Hf3VwX1rCncaD2Z_4JWx1a2YbneEGfAofzds2lMH-kqexYbE);
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center center;
+
+}
+.nav > .nav-left > .form-search-item {
+    width: 80%;
+}
+.nav > .nav-right{
+    width: 50%;
+    justify-content: end;
+    text-align: end;
+}
+
+
+#icon-search{
+    height: 30px;
+    width: 30px;
+    background-image: url(https://banner2.cleanpng.com/20180404/guq/kisspng-computer-icons-user-interface-encapsulated-postscr-search-button-5ac4dcd10ed4e5.9256549415228510250608.jpg);    box-sizing: border-box;
+    background-position: center center;
+    box-sizing: border-box;
+    background-size: cover;
+    border-style: none;
+}
