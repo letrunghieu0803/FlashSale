@@ -1,42 +1,199 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; /* TODO */
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+span{
+    font-size: 20px;
+}
 .nav {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    /* justify-content: space-between; */
+  display: flex;
+  width: 100%;
+  height: 60px;
+  /* justify-content: space-between; */
 }
-/* .nav > * {
-    display: flex;
-} */
-.nav > .nav-left {
-    width: 70%;
-    display: flex;
-}
-.nav > .nav-left > #logo{
-    width: 5%;
-    height: 30px;
-    width: 30px;
-    background-image: url(https://brasol.vn/public/ckeditor/uploads/tin-tuc/brasol.vn-logo-instargram-logo-instagram-vector.png?fbclid=IwAR3HCJB5jq2Hf3VwX1rCncaD2Z_4JWx1a2YbneEGfAofzds2lMH-kqexYbE);
-    background-size: cover;
-    box-sizing: border-box;
-    background-position: center center;
 
+#flow-button {
+  display: flex;
+
+  height: 30px;
+  width: 100px;
+}
+/* .nav-left */
+.nav > .nav-left {
+  width: 70%;
+  display: flex;
+}
+.nav > .nav-left > .logo-nav {
+  display: flex;
+
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+#logo {
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  background-image: url(https://brasol.vn/public/ckeditor/uploads/tin-tuc/brasol.vn-logo-instargram-logo-instagram-vector.png?fbclid=IwAR3HCJB5jq2Hf3VwX1rCncaD2Z_4JWx1a2YbneEGfAofzds2lMH-kqexYbE);
+  background-size: cover;
+  box-sizing: border-box;
+  background-position: center center;
 }
 .nav > .nav-left > .form-search-item {
-    width: 80%;
+  display: flex;
+  width: 90%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
-.nav > .nav-right{
-    width: 50%;
-    justify-content: end;
-    text-align: end;
+
+.form-search-item > * {
+  align-content: center;
+}
+
+#icon-search {
+  height: 30px;
+  width: 30px;
+  background-image: url(https://banner2.cleanpng.com/20180404/guq/kisspng-computer-icons-user-interface-encapsulated-postscr-search-button-5ac4dcd10ed4e5.9256549415228510250608.jpg);
+  box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+}
+
+#input-search {
+  height: 30px;
+  width: 80%;
+  padding-left: 10px;
+}
+.form-search-item > span {
+  padding-right: 10px;
+}
+
+/* .nav-right */
+.nav > .nav-right {
+  display: flex;
+  width: 30%;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.non-button {
+  border-style: none;
+  background-color: #ffffff;
 }
 
 
-#icon-search{
-    height: 30px;
-    width: 30px;
-    background-image: url(https://banner2.cleanpng.com/20180404/guq/kisspng-computer-icons-user-interface-encapsulated-postscr-search-button-5ac4dcd10ed4e5.9256549415228510250608.jpg);    box-sizing: border-box;
-    background-position: center center;
-    box-sizing: border-box;
+/* main */
+.contain{
+    display: flex;
+    /* overflow-y: auto; */
+}
+.contain > .non-contain{
+    width: 15%;
+    height: 100vh;
+}
+
+.contain > .main-contain{
+    display: flex;
+    width: 70%;
+    height: 100vh;
+    border: #edeced 1px solid;
+}
+.main-contain > * {
+  padding-left: 5px;
+}
+.main-contain > .category{
+    height: 60vh;
+    width: 15%;
+    flex-direction: column;
+    position: fixed;
+    display: block;
+}
+
+.main-contain > .category > div {
+    height: 40%;
+    padding: 10px;
+}
+
+.main-contain > .new-feed{
+    padding: 1px !important;
+    display: block;
+    height: 100vh;
+    width: 60%;
+    border: #edeced 1px solid;
+    position: relative;
+    left: 230px;
+
+
+}
+
+.category-detail {
+   padding-left: 20px;
+   padding-top: 10px;
+}
+
+.intro-new-feed {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.intro-new-feed > * {
+  padding-top: 5px;
+}
+.intro-new-feed > p {
+    word-break: break-word;
+}
+
+.img-intro{
+max-width: 50%;
+    height: auto;
     background-size: cover;
-    border-style: none;
+  box-sizing: border-box;
+  background-position: center center;
+}
+
+.search-page{
+  flex-direction: column;
+
+}
+.search-page > p {
+  font-size: 20px;
+  padding: 15px;
+}
+
+.product-intro{
+  border: #edeced 1px solid;
+  display: flex;
+  margin-top: 20px;
+  max-height: 150px;
+}
+
+.img-list{
+  max-width: 95%;
+}
+
+.bottom-intro{
+  display :flex;
+  justify-content: space-between;
+}
+
+/* details-page */
+
+.details {
+  flex-direction: column;
+}
+.details > * {
+  padding: 10px;
+}
+.img-details {
+  max-width: 40%;
+}
+#flow-button {
+  text-align: center;
+  align-items: center ;
+  justify-content: center;
 }
