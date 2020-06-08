@@ -5,7 +5,7 @@ const view = {
       case "home": {
         console.log("hello")
 
-        app.innerHTML = components.home;
+        app.innerHTML = components.home + components.nav;
 
         // let link = document.querySelector("a");
         // link.onclick = function () {
