@@ -99,6 +99,7 @@ span{
 }
 
 .contain > .main-contain{
+  
     display: flex;
     width: 70%;
     height: 100vh;
@@ -197,3 +198,17 @@ max-width: 50%;
   align-items: center ;
   justify-content: center;
 }
+
+
+
+/* form-add-post */
+
+.form-add-post {
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .contain > .main-contain{
+  background-image: url(https://img.thuthuattinhoc.vn/uploads/2019/01/24/hinh-nen-mau-xanh-cute-dep-nhat_115835131.jpg);
+} */
