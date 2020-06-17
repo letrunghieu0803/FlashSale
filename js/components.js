@@ -172,19 +172,9 @@ const components = {
   details : `
     <div class="contain">
       <div class="non-contain"></div>
-      <div class="main-contain details">
-      <p>title</p>
-      <img class="img-details"
-        src="https://inthenhua.net.vn/wp-content/uploads/2017/01/the-giam-gia-1.jpg"
-        alt=""
-      />
-      <p>Chi tiết sản phẩm</p>
-      <p>Thời hạn sử dụng</p>
-      <p>Địa điểm sử dụng</p>
-      <p>Giá cả</p>
-      <p>Người đăng</p>    
-      <p>Phương thức liên hệ</p>
-      <button id="flow-button">Theo dõi</button>
+      <div id="detailDiv" class="main-contain details">
+
+      </div>
     </div>
     </div>
     `

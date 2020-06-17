@@ -23,14 +23,17 @@ const controller = {
       });
   },
   clickNewFeed: async function () {
-    let newFeed = document.querySelector(".intro-new-feed");
-    newFeed.onclick = async function (e) {
-      e.preventDefault();
-      let introduce = newFeed.children[2].innerHTML;
-      let key = introduce.replace("Mô tả : ", "");
-      await controller.catchKey("description",key);
-
-    };
+    let newFeed = document.querySelectorAll(".intro-new-feed");
+    for(let i=0;i<newFeed.length;i++){
+      newFeed[i].onclick = async function (e) {
+        e.preventDefault();
+        let introduce = newFeed[i].children[2].innerHTML;
+        let key = introduce.replace("Mô tả : ", "");
+        await controller.catchKey("description",key);
+  
+      };
+    }
+   
   },
 
 
@@ -67,20 +70,53 @@ const controller = {
   },
 
   showDetail: async function(object) {
+    await view.showScreen("details")
+    let mainContain = document.getElementById('detailDiv')
+    mainContain.innerHTML= ""
+    mainContain.innerHTML = `
+    <p>${object.title}</p>
+    <img class="img-details"
+      src="${object.linkAnh}"
+      alt=""
+    />
+    <p>Chi tiết sản phẩm: ${object.description}</p>
+    <p>Thời hạn sử dụng: ${object.deadTime}</p>
+    <p>Địa điểm sử dụng: ${object.placeUse}</p>
+    <p>Giá cả: ${object.price}</p>
+    <p>Phương thức liên hệ: ${object.contact}</p>
+    <div class="main-contain details">
+    <p>Người đăng: ${object.userPost}</p>    
+    <p>Ngày đăng: ${object.timePost}</p>
+    <button id="flow-button">Theo dõi</button>
+    </div>
+    `
+  },
 
-  }
 
-
-  ,
   backHome: function () {
     let logoHome = document.getElementById("logo");
     logoHome.onclick = function () {
       view.showScreen("home");
     };
   },
+  searchWithCategory: function (){
+    let categoryDetail = document.querySelectorAll('.category-detail')
+    for(let i = 0; i < categoryDetail.length; i++){
+      categoryDetail[i].onclick = async function (e) {
+        e.preventDefault();
+        let wordSearch = categoryDetail[i].innerHTML;
+        console.log(wordSearch)
+        // let key = introduce.replace("Mô tả : ", "");
+        // await controller.catchKey("description",key);
+        
+      };
+    }
 
+    // view.showScreen("search")
 
+  }
 
+  ,
   seachForm: function () {
     let formSeach = document.querySelector(".form-search-item");
     formSeach.onsubmit = function (event) {
@@ -196,6 +232,6 @@ const controller = {
     };
     controller.backHome();
     controller.seachForm();
-    controller.seachForm();
+    controller.searchWithCategory()
   },
 };
