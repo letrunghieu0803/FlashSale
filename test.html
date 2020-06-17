@@ -4,25 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/test.css">
+    <link rel="stylesheet" href="./css/test.css" />
+    <link rel="stylesheet" href="./css/formAddPost.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&amp;display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDs5iQDzuo7V4RmToaSA9X9EWq_5B3FXek",
+        authDomain: "flash-sale-503a4.firebaseapp.com",
+        databaseURL: "https://flash-sale-503a4.firebaseio.com",
+        projectId: "flash-sale-503a4",
+        storageBucket: "flash-sale-503a4.appspot.com",
+        messagingSenderId: "494996077812",
+        appId: "1:494996077812:web:130c848f1406d7ac5a72a1",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="./js/test.js"></script>
+    <script src="./js/utils.js"></script>
   </head>
   <body>
-     <div class="contain">
-       <div class="non-contain"></div>
-       <div class="main-contain ">
-         <button id="test-button">a</button>
-        <form class="form-add-post" id="demo" action="">
-          <input type="text" class="input-post" name="title" placeholder="Nhập tên sản phẩm/ Tiêu đề">
-          <input type="text" class="input-post" name="">
-          <button type="submit"></button>
-        </form>
-       </div>
-     </div>
+    <div class="contain-add">
+      <div class="non-contain"></div>
+      <div class='main-contain-add'>
+       
+      </div>
+    </div>
+  
   </body>
 </html>

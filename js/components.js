@@ -7,12 +7,12 @@ const components = {
         </div>
         <form action="" class="form-search-item">
           <span>Search</span>
-          <input id="input-search" type="text" placeholder="Nhap thu m tim" />
-          <button id="icon-search" class="non-button"></button>
+          <input id="input-search" type="text" placeholder="Nhập thứ bạn cần tìm" />
+          <button id="icon-search" type="submit" class="non-button"></button>
         </form>
       </div>
       <div class="nav-right">
-        <button class="non-button">dang bai</button>
+        <button class="non-button" id="add-post-btn">dang bai</button>
         <button class="non-button">user</button>
         <button class="non-button">
           <i class="">dang nhap/dangxuat</i>
@@ -21,7 +21,9 @@ const components = {
     </nav>
     `
     ,
-  home: `    
+  home: `  
+    <div class="bia-nen-home">
+    </div>
     <div class="contain">
       <div class="non-contain"></div>
       <div class="main-contain">
@@ -41,28 +43,8 @@ const components = {
         </div>
         <div class="new-feed">
           <span> Bài đăng mới </span>
-          <div class="intro-new-feed">
-            <p id="title">Title</p>
-            <img class="img-intro" data-atf="true" src="https://namthanh.vn//Upload/20082018/ve-may-bay-da-mua-co-tra-lai-duoc-khong.jpg" alt="" />
-            <p id="introduce">Mô tả : vscaswadavbsbasvassssssssssssssssssssssssssa1dsa5d6aw41d651v561v6531d4v65ds64s6d84f9s8d64c1d31v3sd1s513542 dád</p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-          </div>
-          <div class="intro-new-feed">
-            <p id="title">Title</p>
-            <img class="img-intro" data-atf="true" src="https://techbike.vn/attachments/the-member-cgv-jpg.3511/" alt="" />
-            <p id="introduce">Mô tả:</p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-          </div>
-          <div class="intro-new-feed">
-            <p id="title">Title</p>
-            <img class="img-intro" data-atf="true" src="https://lh3.googleusercontent.com/proxy/NY6fKcDv5nNX_jT79-e0Gp_q-PSgNqlIj1nBj-1kjgYhN-zpkGTdODQjP59PF5-B_q2_PCgs04io9jzQBJkp2JpSR6RlB_rJquOmnmvbwi_sF2WAMJZE-_Pj" alt="" />
-            <p id="introduce">Mô tả:</p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-          </div>
-          </div>
+          
+          
         </div>
 
       </div>
@@ -190,7 +172,7 @@ const components = {
   details : `
     <div class="contain">
       <div class="non-contain"></div>
-    <div class="main-contain details">
+      <div class="main-contain details">
       <p>title</p>
       <img class="img-details"
         src="https://inthenhua.net.vn/wp-content/uploads/2017/01/the-giam-gia-1.jpg"
@@ -199,15 +181,65 @@ const components = {
       <p>Chi tiết sản phẩm</p>
       <p>Thời hạn sử dụng</p>
       <p>Địa điểm sử dụng</p>
-      
       <p>Giá cả</p>
-      <p>Người đăng</p>
-      
+      <p>Người đăng</p>    
       <p>Phương thức liên hệ</p>
       <button id="flow-button">Theo dõi</button>
     </div>
     </div>
     `
     ,
+  addPost : 
+  `
+    <div class="contain-add">
+    <div class="non-contain"></div>
+    <div class='main-contain-add'>
+    <h2>Nội dung các mục khi đăng  </h2>
+        <form action="" id="form-add-post" >
+          <input type="text" name="title" id="tilte-form-add" placeholder="Nhập tên sản phẩm">
+          <div id="title-error" class="error"></div>
+
+          <input type="text" name="description" id="description-form-add" placeholder="Mô tả sản phẩm">
+          <div id="description-error" class="error"></div>
+
+          <input type="text" name="deadTime" id="time-form-add" placeholder="Nhập thời hạn sử dụng của sản phẩm">
+          <div id="time-error" class="error"></div>
+
+          <div class="area-form-add" id="area-form-add">
+            <span>Khu vực:</span>
+            <input type="radio" name="area" value="Miền Bắc"> Miền Bắc
+            <input type="radio" name="area" value="Miền Trung"> Miền Trung
+            <input type="radio" name="area" value="Miền Nam"> Miền Nam
+          </div>
+          
+          <div id="area-error" class="error"></div>
+
+          <div class="time-form-add" id="time-form-add">
+          <span>Thời gian:</span>
+          <input type="radio" name="time" value="Thời gian cố định"> Thời gian cố định
+          <input type="radio" name="time" value="Thời gian cố hạn"> Thời gian có hạn
+        </div>
+        
+        <div id="time-error" class="error"></div>
+          
+          <input type="text" name="placeUse"  placeholder="Nhập địa chỉ cụ thể sử dụng sản phẩm">
+          <div id="placeUse-error" class="error"></div>
+
+          <input type="text" name="price" placeholder="Nhập giá sản phẩm">
+          <div id="price-error" class="error"></div>
+
+          <input type="text" name="contact" placeholder="Nhập phương thức liên lạc với chủ sản phẩm">
+          <div id="contact-error" class="error"></div>
+
+          <div id="upload-picture-form">
+            <span>Chọn ảnh minh họa sản phẩm:</span>
+            <input type="file" name="picture" id="upload-picture">
+          </div>
+          <button type="submit" id="form-post-btn">Đăng</button>
+        </form>
+      </div>
+    </div>
+    `
+  ,
   
 };

@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box; /* TODO */
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
 span{
@@ -13,6 +13,15 @@ span{
   width: 100%;
   height: 60px;
   /* justify-content: space-between; */
+  background-color: #135c96;
+}
+.nav > * {
+  color: #ffffff;
+}
+
+.nav > * > * {
+  color: #ffffff;
+
 }
 
 #flow-button {
@@ -21,11 +30,23 @@ span{
   height: 30px;
   width: 100px;
 }
+
+.bia-nen-home {
+  background-image: url(https://loinoihay.net/wp-content/uploads/2016/04/Nh%E1%BB%AFng-%E1%BA%A3nh-b%C3%ACa-facebook-%C4%91%E1%BA%B9p-nh%E1%BA%A5t-%C3%BD-ngh%C4%A9a-nh%E1%BA%A5t-b%E1%BA%A1n-n%C3%AAn-tham-kh%E1%BA%A3o10.jpg);
+  height: 150px;
+  width: 100%;
+  /* background-size: cover; */
+  box-sizing: border-box;
+  background-position: center center;
+  /* margin-top: 20px; */
+  margin-bottom: 50px;
+}
 /* .nav-left */
 .nav > .nav-left {
   width: 70%;
   display: flex;
 }
+
 .nav > .nav-left > .logo-nav {
   display: flex;
 
@@ -84,7 +105,7 @@ span{
 
 .non-button {
   border-style: none;
-  background-color: #ffffff;
+  background-color: #135c96;
 }
 
 
@@ -103,7 +124,6 @@ span{
     display: flex;
     width: 70%;
     height: 100vh;
-    border: #edeced 1px solid;
 }
 .main-contain > * {
   padding-left: 5px;
@@ -114,6 +134,11 @@ span{
     flex-direction: column;
     position: fixed;
     display: block;
+    background-image: url(https://www.gocbao.com/wp-content/uploads/2020/04/hinh-nen-den-doc-dao_053033588-1280x800-8.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 16px;
 }
 
 .main-contain > .category > div {
@@ -126,7 +151,6 @@ span{
     display: block;
     height: 100vh;
     width: 60%;
-    border: #edeced 1px solid;
     position: relative;
     left: 230px;
 
@@ -150,8 +174,9 @@ span{
 }
 
 .img-intro{
-max-width: 50%;
-    height: auto;
+  max-width: 80%;
+  width: auto;
+  height: 250px;
     background-size: cover;
   box-sizing: border-box;
   background-position: center center;
@@ -167,7 +192,6 @@ max-width: 50%;
 }
 
 .product-intro{
-  border: #edeced 1px solid;
   display: flex;
   margin-top: 20px;
   max-height: 150px;
