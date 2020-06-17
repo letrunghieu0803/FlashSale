@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // window.onload = function () {
 //   let testButton = document.getElementById("test-button");
 //   console.log(testButton);
@@ -39,4 +40,18 @@ window.onload = async function () {
     e.preventDefault();
     console.log(newFeed.children[2].innerHTML);
   };
+=======
+window.onload = function () {
+  let testButton = document.getElementById("test-button");
+  console.log(testButton);
+  let formAdd = document.querySelector(".form-add-post");
+  if (testButton) {
+    testButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      formAdd.style.visibility = "visible";
+      document.querySelector(".contain").style.opacity = "0.5"
+      formAdd.style.opacity = "1"
+    });
+  }
+>>>>>>> 34ef7b9ec11497e0a075e4108a7e44fb1cbb84c7
 };

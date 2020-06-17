@@ -17,6 +17,10 @@ const view = {
         app.innerHTML = components.nav + components.search;
         controller.queryBasic()
 
+<<<<<<< HEAD
+=======
+        app.innerHTML = components.home + components.nav;
+>>>>>>> 34ef7b9ec11497e0a075e4108a7e44fb1cbb84c7
 
         break;
       }
