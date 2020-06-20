@@ -33,5 +33,20 @@ const utils = {
   },
   formatDate(isoString){
     return new Date(isoString).toLocaleDateString()
+  },
+  removeAccents(str) {
+    return str.normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')
+              .replace(/đ/g, 'd').replace(/Đ/g, 'D');
+  },
+  firebaseUser: function() {
+    return currentUser = firebase.auth().currentUser
+  },
+  firebaseUserEmail: function() {
+    return currentUserEmail = firebase.auth().currentUser.email
+  },
+  firebaseUserName: function() {
+    return currentUser = firebase.auth().currentUser.displayName
+    
   }
 }

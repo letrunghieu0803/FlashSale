@@ -1,17 +1,9 @@
-<<<<<<< HEAD
+#content-report {
+    width: 730px;
+    height: 200px;
+}
 
-.nav-right {
-    display: flex;
-    flex-direction: column;
-=======
-.form-add-post{
-    visibility: hidden;
-}
-#test-button{
-    height: 20px;
-    width: 20px;
-}
-.contain {
-    background-color: aqua;
->>>>>>> 34ef7b9ec11497e0a075e4108a7e44fb1cbb84c7
+#body-report {
+    margin-top: 5%;
+    background-image: url(https://img.thuthuattinhoc.vn/uploads/2019/01/24/cute-background-hd_115830959.jpg);
 }

@@ -177,7 +177,7 @@ span{
   max-width: 80%;
   width: auto;
   height: 250px;
-    background-size: cover;
+  background-size: cover;
   box-sizing: border-box;
   background-position: center center;
 }
@@ -193,12 +193,18 @@ span{
 
 .product-intro{
   display: flex;
+  flex-direction: column;
   margin-top: 20px;
-  max-height: 150px;
+  max-height: 300px;
 }
 
 .img-list{
-  max-width: 95%;
+  max-width: 60%;
+  height: auto;
+  background-size: cover;
+  box-sizing: border-box;
+  background-position: center center;
+  
 }
 
 .bottom-intro{
@@ -236,3 +242,206 @@ span{
 /* .contain > .main-contain{
   background-image: url(https://img.thuthuattinhoc.vn/uploads/2019/01/24/hinh-nen-mau-xanh-cute-dep-nhat_115835131.jpg);
 } */
+
+.register {
+  width: 100%;
+  height: 100vh;
+  background: url("/img/register.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.header {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.header > h1 {
+  font-size: 42px;
+}
+
+.header > h3 {
+  padding-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-register {
+  background: rgba(0, 0, 0, 0.7);
+  width: 500px;
+  height: 89%;
+  border: 1.2px solid greenyellow;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+.input-wrapper {
+  padding: 0px 20px;
+}
+
+.input-wrapper > input {
+  width: 100%;
+  font-size: 26px;
+  border-radius: 5px;
+  /* margin-bottom: 20px; */
+}
+
+.form-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-user > * {
+  width: calc(50% - 5px);
+}
+
+.text {
+  font-size: 20px;
+}
+
+.btn-register {
+  margin: 0px 10px;
+  margin-top: 30px;
+  text-align: end;
+}
+
+.btn-register > button {
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.input-bDay > input {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.input-gender {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+a:hover {
+  color: #16e0d2;
+  text-decoration: underline;
+}
+
+
+/* login */
+.login {
+  width: 100%;
+  height: 100vh;
+  background: url(/img/login.jpg) center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.form-login {
+  background: rgba(0, 0, 0, 0.7);
+  width: 400px;
+  height: 60%;
+  border: 1.2px solid greenyellow;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.btn-login {
+  text-align: end;
+  margin: 0px 10px;
+  margin-top: 30px;
+}
+
+.btn-login > button {
+  font-size: 26px;
+  margin-bottom: 10px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+button {
+  background: blue;
+  color: white;
+}
+
+.error, .message-error {
+  /* padding: 5px; */
+  height: 30px;
+  color: red;
+  font-size: 26px;
+}
+
+.success {
+  /* padding: 5px; */
+  height: 30px;
+  color: green;
+  font-size: 26px;
+}
+
+
+
+
+/* user-info */
+
+.user-info {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* .nav-user-info {
+  width: 100%;
+  height: 120px;
+  background-image: repeating-linear-gradient(0, #02e1e0, #0a78cd);
+} */
+
+.background {
+  width: 100%;
+  height: calc(100vh - 60px);;
+  background: url(/img/login.jpg) center center no-repeat;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.form-user-info {
+  background: rgba(0, 0, 0, 0.7);
+  width: 500px;
+  height: 80%;
+  border: 1.2px solid greenyellow;
+  border-radius: 10px;
+  margin-top: 5%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-user-info>* {
+  margin: 0px 10px;
+}
+
+.user-name {
+  font-size: 26px;
+  text-align: center;
+}
+
+.form-user-info>button {
+  margin-top: 10px;
+  /* align-content: flex-end; */
+}
+
+.button-back {
+  align-self: flex-end;
+}
+

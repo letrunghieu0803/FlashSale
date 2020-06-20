@@ -12,15 +12,15 @@ const components = {
         </form>
       </div>
       <div class="nav-right">
-        <button class="non-button" id="add-post-btn">dang bai</button>
-        <button class="non-button">user</button>
-        <button class="non-button">
-          <i class="">dang nhap/dangxuat</i>
-        </button>
+        <button class="non-button" id="add-post-btn"></button>
+        <button class="non-button" class="item-link" id="item-link-feedback"></button>   
+        <button class="non-button" class="item-link" id="item-link-user"></button>
+        <button class="non-button" class="item-link" id="item-link-logout"></button>
+        
       </div>
     </nav>
     `
-    ,
+  ,
   home: `  
     <div class="bia-nen-home">
     </div>
@@ -49,127 +49,18 @@ const components = {
 
       </div>
     `
-    ,
-  search : `
+  ,
+  search: `
     <div class="contain">
       <div class="non-contain"></div>
-      <div class="main-contain search-page">
+      <div class="main-contain search-page" id="searchPage">
         <p>Danh sách bạn cần tìm</p>
-        <div class="product-intro">
-          <div class="pic-intro">
-            <img class="img-intro img-list"
-              src="https://tutimviec.com/wp-content/uploads/2019/04/bachhoaxanh-amp.jpg"
-              alt=""
-            />
-          </div>
-          <div class="details-intro">
-            <p id="title">Title</p>
-            <p id="introduce">
-              Mô tả :
-              vscaswadavbsbasvassssssssssssssssssssssssssa1dsa5d6aw41d651v561v6531d4v65ds64s6d84f9s8d64c1d31v3sd1s513542
-              dád
-            </p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-            <div class="bottom-intro">
-              <p>Địa điểm</p>
-              <button>Theo dõi</button>
-            </div>
-          </div>
-        </div>
-       
-        <div class="product-intro">
-          <div class="pic-intro">
-            <img class="img-intro img-list"
-              src="https://tutimviec.com/wp-content/uploads/2019/04/bachhoaxanh-amp.jpg"
-              alt=""
-            />
-          </div>
-          <div class="details-intro">
-            <p id="title">Title</p>
-            <p id="introduce">
-              Mô tả :
-              vscaswadavbsbasvassssssssssssssssssssssssssa1dsa5d6aw41d651v561v6531d4v65ds64s6d84f9s8d64c1d31v3sd1s513542
-              dád
-            </p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-            <div class="bottom-intro">
-              <p>Địa điểm</p>
-              <button>Theo dõi</button>
-            </div>
-          </div>
-        </div>
-        <div class="product-intro">
-          <div class="pic-intro">
-            <img class="img-intro img-list"
-              src="https://tutimviec.com/wp-content/uploads/2019/04/bachhoaxanh-amp.jpg"
-              alt=""
-            />
-          </div>
-          <div class="details-intro">
-            <p id="title">Title</p>
-            <p id="introduce">
-              Mô tả :
-              vscaswadavbsbasvassssssssssssssssssssssssssa1dsa5d6aw41d651v561v6531d4v65ds64s6d84f9s8d64c1d31v3sd1s513542
-              dád
-            </p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-            <div class="bottom-intro">
-              <p>Địa điểm</p>
-              <button>Theo dõi</button>
-            </div>
-          </div>
-        </div>
-        <div class="product-intro">
-          <div class="pic-intro">
-            <img class="img-intro img-list"
-              src="https://tutimviec.com/wp-content/uploads/2019/04/bachhoaxanh-amp.jpg"
-              alt=""
-            />
-          </div>
-          <div class="details-intro">
-            <p id="title">Title</p>
-            <p id="introduce">
-              Mô tả :
-              vscaswadavbsbasvassssssssssssssssssssssssssa1dsa5d6aw41d651v561v6531d4v65ds64s6d84f9s8d64c1d31v3sd1s513542
-              dád
-            </p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-            <div class="bottom-intro">
-              <p>Địa điểm</p>
-              <button>Theo dõi</button>
-            </div>
-          </div>
-        </div>
-        <div class="product-intro">
-          <div class="pic-intro">
-            <img class="img-intro img-list"
-              src="https://tutimviec.com/wp-content/uploads/2019/04/bachhoaxanh-amp.jpg"
-              alt=""
-            />
-          </div>
-          <div class="details-intro">
-            <p id="title">Title</p>
-            <p id="introduce">
-              Mô tả :
-              vscaswadavbsbasvassssssssssssssssssssssssssa1dsa5d6aw41d651v561v6531d4v65ds64s6d84f9s8d64c1d31v3sd1s513542
-              dád
-            </p>
-            <p id="time-date">Thời hạn sử dụng:</p>
-            <p id="price">Giá:</p>
-            <div class="bottom-intro">
-              <p>Địa điểm</p>
-              <button>Theo dõi</button>
-            </div>
-          </div>
+        
         </div>
       </div>
     </div>`
-    ,
-  details : `
+  ,
+  details: `
     <div class="contain">
       <div class="non-contain"></div>
       <div id="detailDiv" class="main-contain details">
@@ -178,9 +69,9 @@ const components = {
     </div>
     </div>
     `
-    ,
-  addPost : 
-  `
+  ,
+  addPost:
+    `
     <div class="contain-add">
     <div class="non-contain"></div>
     <div class='main-contain-add'>
@@ -207,7 +98,7 @@ const components = {
           <div class="time-form-add" id="time-form-add">
           <span>Thời gian:</span>
           <input type="radio" name="time" value="Thời gian cố định"> Thời gian cố định
-          <input type="radio" name="time" value="Thời gian cố hạn"> Thời gian có hạn
+          <input type="radio" name="time" value="Thời gian có hạn"> Thời gian có hạn
         </div>
         
         <div id="time-error" class="error"></div>
@@ -231,5 +122,186 @@ const components = {
     </div>
     `
   ,
-  
+  register:
+    `
+    <section class="register">
+    <form class="form-register">
+
+        <div class="form-form">
+
+    
+        <div class="header">
+            <h1>Flash Sale</h1>
+            <h3>Nhanh chóng và dễ dàng <3</h3>
+        </div>
+        <div class="form-user">
+            <div class="input-wrapper">
+                <input type="text" name="firstName" placeholder=" Họ">
+                <div id="firstName-error" class="error"></div>
+                </div>
+            <div class="input-wrapper">
+                <input type="text" name="lastName" placeholder=" Tên">
+                <div id="lastName-error" class="error"></div>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="email" name="email" placeholder=" Email">
+            <div id="email-error" class="error"></div>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="password" name="password" placeholder=" Mật khẩu">
+            <div id="password-error" class="error"></div>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="password" name="comfirmPassword" placeholder=" Nhập lại mật khẩu">
+            <div id="comfirmPassword-error" class="error"></div>
+        </div>
+
+        <div class="birthDay text input-wrapper">Ngày sinh</div>
+        <div class="input-bDay input-wrapper">
+            <input type="date" name="bDay">
+            <div id="bDay-error" class="error"></div>
+
+        </div>
+
+        <div class="gender text input-wrapper">Giới tính</div>
+        <div class="input-gender">
+            <input type="radio" name="gender" value="Nam" checked> Nam
+            <input type="radio" name="gender" value="Nữ"> Nữ
+            <input type="radio" name="gender" value="Khác"> Khác
+            <div id="gender-error" class="error"></div>
+        </div>
+
+        <div class="message-error" id="register-error"></div>
+
+        <div class="btn-register">
+            <a href="#" class="a">Đi đến đăng nhập</a>
+            <button class="register-btn">Đăng ký</button>
+        </div>
+        </div>
+
+        
+    </form>
+</section>
+    `,
+
+  login:
+    `
+        <section class="login">
+        <form class="form-login">
+            <div class="header">
+                <h1>Flash Sale</h1>
+                <h3>Nhanh chóng và dễ dàng <3</h3>
+            </div>
+            
+            <div class="input-wrapper">
+                <input type="email" name="email" placeholder=" Email">
+                <div id="email-error" class="error"></div>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="password" name="password" placeholder=" Mật khẩu">
+                <div id="password-error" class="error"></div>
+            </div>
+            <div class="message-success message-error error "></div>
+
+            <div class="btn-login">
+                <a href="#" class="a">Đi đến đăng ký</a>
+                <button class="login-btn" id="test">Đăng nhập</button>
+            </div>
+
+            
+        </form>
+    </section>
+`,
+  user:
+    `
+    <section class="user-info">
+    <div class="background">
+        <form class="form-user-info">
+            <div class="input-wrapper">
+                Tên<input type="text" name="name">
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                Email<input type="email" name="email">
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                SĐT<input type="number" name="phoneNumber">
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                Ngày sinh<input type="text" name="birthDay">
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                Giới tính<input type="text" name="gender">
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                Địa chỉ<input type="text" name="address" >
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                Cmt<input type="number" name="cmt">
+                </input>
+            </div>
+
+            <div class="input-wrapper">
+                Ngày tạo<input type="text" name="createdAt">
+                </input>
+            </div>
+
+            <div>
+                <button class="update">Cập nhập thông tin</button>
+
+            </div>
+
+            <div class="button-back">
+                <button type="button">Quay lại trang chủ</button>
+
+            </div>
+        </form>
+    </div>
+</section>
+    `
+  ,
+feedback :
+`
+  <div class="container">
+      <div class="row">
+          <div class="col-3">
+          </div>
+          <div id="body-report" class="col-8">
+              <div>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="email-report" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="exampleInputPassword1">Nội dung</label>
+                      <input id="content-report" type="text">
+                  </div>
+
+                  <button id="submit-report" type="submit" class="btn btn-primary">Submit</button>
+              </div>            
+          </div>
+          <div class="col-3">
+
+          </div>
+      </div>
+  </div>
+  `,
 };

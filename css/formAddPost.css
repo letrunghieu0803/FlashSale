@@ -1,52 +1,62 @@
 .contain-add {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-  }
-  
-  .non-contain {
-    width: 15%;
-    min-height: 90%;
-  }
-  
-  .main-contain-add {
-    min-width: 65%;
-    min-height: 90%;
-  }
-  
-  .main-contain-add > #form-add-post {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #form-add-post > * {
-    margin-top: 10px;
-  }
-  
-  #form-add-post > input {
-    height: 30px;
-  }
-  
-  #form-add-post > #description-form-add {
-    height: 60px;
-  }
-  
-  #form-post-btn {
-    height: 30px;
-    width: 60px;
-    margin-left: 93%;
-  }
-  
-  #upload-picture-form{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #upload-picture{
-    padding: 10px;
-  }
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
 
-  .error {
-    color: red;
-    font-size: 12px;
-  }
+.non-contain {
+  width: 15%;
+  min-height: 90%;
+}
+
+.main-contain-add {
+  min-width: 65%;
+  min-height: 90%;
+}
+
+.main-contain-add > #form-add-post {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-add-post > * {
+  margin-top: 10px;
+}
+
+#form-add-post > input {
+  height: 30px;
+}
+
+#form-add-post > #description-form-add {
+  height: 60px;
+}
+
+#form-post-btn {
+  height: 30px;
+  width: 60px;
+  margin-left: 93%;
+}
+
+#upload-picture-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#upload-picture {
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+#content-report {
+  width: 730px;
+  height: 200px;
+}
+
+#body-report {
+  margin-top: 5%;
+  background-image: url(https://img.thuthuattinhoc.vn/uploads/2019/01/24/cute-background-hd_115830959.jpg);
+}
