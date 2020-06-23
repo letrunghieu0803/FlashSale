@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <script>
       var firebaseConfig = {
         apiKey: "AIzaSyDs5iQDzuo7V4RmToaSA9X9EWq_5B3FXek",
@@ -28,6 +28,12 @@
       };
       firebase.initializeApp(firebaseConfig);
     </script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+     <script type="text/javascript">
+         (function(){
+            emailjs.init('user_VMV8hqj19IbtmcPscx6tQ');
+         })();
+     </script>
 
     <script src="./js/controller.js"></script>
     <script src="./js/main.js"></script>

@@ -4,13 +4,14 @@ const view = {
     view.saveCurrentView(screenName);
     switch (screenName) {
       case "home": {
-        app.innerHTML = components.nav + components.home;
-
+        app.innerHTML = components.nav + components.home + components.footer;
         await controller.showNewsFeed();
+        let currentEmail = localStorage.getItem('currentEmail')
+        // view.saveDatatoStorage('currentEmail',currentEmail)
         controller.queryBasic();
         controller.clickNewFeed();
-        const newFeed = document.querySelector("new-feed");
-
+        controller.searchWithCategory();
+        controller.searchWithUserUse(currentEmail)
         break;
       }
 
@@ -22,16 +23,14 @@ const view = {
       }
       case "addPost": {
         app.innerHTML = components.nav + components.addPost;
-       let currentUser = utils.firebaseUser()
+       let currentUser = localStorage.getItem('currentEmail')
         controller.postForm(currentUser);
         controller.queryBasic();
-
         break;
       }
       case "details": {
         app.innerHTML = components.nav + components.details;
         controller.queryBasic();
-
         break;
       }
 
@@ -78,7 +77,7 @@ const view = {
         };
         let email = view.getDataFromStorage('userEmail')
         let name = view.getDataFromStorage('userDisplayName')
-        console.log(email, name)
+        // console.log(email, name)
         controller.showUserInformations(email,name)
         controller.updateUserInformations()
         break;
@@ -134,11 +133,11 @@ const view = {
               "Xác nhận sai mật khẩu"
             ),
             utils.validate(registerInfo.bDay, "#bDay-error", "Nhập ngày sinh"),
-            utils.validate(
-              registerInfo.gender,
-              "#gender-error",
-              "Missing gender!"
-            ),
+            // utils.validate(
+            //   registerInfo.gender,
+            //   "#gender-error",
+            //   "Missing gender!"
+            // ),
           ];
 
           //submit
@@ -152,8 +151,10 @@ const view = {
       case 'feedback' : {
         app.innerHTML = components.nav + components.feedback
         controller.queryBasic()
+        controller.feedBackForm()
         break;
       }
+  
     }
   },
 

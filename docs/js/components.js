@@ -6,7 +6,6 @@ const components = {
           <button id="logo" class="non-button"></button>
         </div>
         <form action="" class="form-search-item">
-          <span>Search</span>
           <input id="input-search" type="text" placeholder="Nhập thứ bạn cần tìm" />
           <button id="icon-search" type="submit" class="non-button"></button>
         </form>
@@ -22,8 +21,7 @@ const components = {
     `
   ,
   home: `  
-    <div class="bia-nen-home">
-    </div>
+    
     <div class="contain">
       <div class="non-contain"></div>
       <div class="main-contain">
@@ -31,14 +29,14 @@ const components = {
           <span>Phân loại</span>
           <div class="time-category">
             <span>Thời gian</span>
-            <div class="category-detail">Thời gian cố định</div>
-            <div class="category-detail">Thời gian có hạn</div>
+            <div class="category-detail hover-cursor">Thời gian cố định</div>
+            <div class="category-detail hover-cursor">Thời gian có hạn</div>
           </div>
           <div class="place-category">
             <span>Địa điểm</span>
-            <div class="category-detail">Miền Bắc</div>
-            <div class="category-detail">Miền Trung</div>
-            <div class="category-detail">Miền Nam</div>
+            <div class="category-detail hover-cursor">Miền Bắc</div>
+            <div class="category-detail hover-cursor">Miền Trung</div>
+            <div class="category-detail hover-cursor">Miền Nam</div>
           </div>
         </div>
         <div class="new-feed">
@@ -47,7 +45,15 @@ const components = {
           
         </div>
 
+        <div class="follow">
+          <div class='user-use hover-cursor'>Bài viết đã đăng
+          </div>
+          <div class='user-use hover-cursor'>Bài viết đang theo dõi
+          </div>
       </div>
+      </div>
+      </div>
+      
     `
   ,
   search: `
@@ -63,8 +69,7 @@ const components = {
   details: `
     <div class="contain">
       <div class="non-contain"></div>
-      <div id="detailDiv" class="main-contain details">
-
+      <div class="main-contain" id='detail-main'></div>
       </div>
     </div>
     </div>
@@ -80,7 +85,7 @@ const components = {
           <input type="text" name="title" id="tilte-form-add" placeholder="Nhập tên sản phẩm">
           <div id="title-error" class="error"></div>
 
-          <input type="text" name="description" id="description-form-add" placeholder="Mô tả sản phẩm">
+          <textarea  type="text" name="description" id="description-form-add" placeholder="Mô tả sản phẩm"></textarea>
           <div id="description-error" class="error"></div>
 
           <input type="text" name="deadTime" id="time-form-add" placeholder="Nhập thời hạn sử dụng của sản phẩm">
@@ -101,7 +106,7 @@ const components = {
           <input type="radio" name="time" value="Thời gian có hạn"> Thời gian có hạn
         </div>
         
-        <div id="time-error" class="error"></div>
+        <div id="time-error2" class="error"></div>
           
           <input type="text" name="placeUse"  placeholder="Nhập địa chỉ cụ thể sử dụng sản phẩm">
           <div id="placeUse-error" class="error"></div>
@@ -116,8 +121,10 @@ const components = {
             <span>Chọn ảnh minh họa sản phẩm:</span>
             <input type="file" name="picture" id="upload-picture">
           </div>
+          <div class="div-post-btn">
           <button type="submit" id="form-post-btn">Đăng</button>
-        </form>
+          </div>
+          </form>
       </div>
     </div>
     `
@@ -172,7 +179,6 @@ const components = {
             <input type="radio" name="gender" value="Nam" checked> Nam
             <input type="radio" name="gender" value="Nữ"> Nữ
             <input type="radio" name="gender" value="Khác"> Khác
-            <div id="gender-error" class="error"></div>
         </div>
 
         <div class="message-error" id="register-error"></div>
@@ -206,7 +212,7 @@ const components = {
                 <input type="password" name="password" placeholder=" Mật khẩu">
                 <div id="password-error" class="error"></div>
             </div>
-            <div class="message-success message-error error "></div>
+            <div class="message-success error" id="message-error"></div>
 
             <div class="btn-login">
                 <a href="#" class="a">Đi đến đăng ký</a>
@@ -219,89 +225,115 @@ const components = {
 `,
   user:
     `
-    <section class="user-info">
-    <div class="background">
-        <form class="form-user-info">
-            <div class="input-wrapper">
-                Tên<input type="text" name="name">
-                </input>
-            </div>
+  <section class="user-info">
+  <div class="background">
+      <form class="form-user-info">
+          <div class="input-wrapper px">
+              Tên<input type="text" name="name">
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                Email<input type="email" name="email">
-                </input>
-            </div>
+          <div class="input-wrapper">
+              Email<input type="email" class="disable-input" name="email" disabled="disabled">
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                SĐT<input type="number" name="phoneNumber">
-                </input>
-            </div>
+          <div class="input-wrapper">
+              SĐT<input type="number" name="phoneNumber">
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                Ngày sinh<input type="text" name="birthDay">
-                </input>
-            </div>
+          <div class="input-wrapper">
+              Ngày sinh<input type="date" name="birthDay">
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                Giới tính<input type="text" name="gender">
-                </input>
-            </div>
+          <div class="input-wrapper">
+              Giới tính<input type="text" name="gender">
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                Địa chỉ<input type="text" name="address" >
-                </input>
-            </div>
+          <div class="input-wrapper">
+              Địa chỉ<input type="text" name="address" >
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                Cmt<input type="number" name="cmt">
-                </input>
-            </div>
+          <div class="input-wrapper">
+              Cmt<input type="number" name="cmt">
+              </input>
+          </div>
 
-            <div class="input-wrapper">
-                Ngày tạo<input type="text" name="createdAt">
-                </input>
-            </div>
+          <div class="input-wrapper">
+              Ngày tạo<input class="disable-input" type="text" name="createdAt" disabled="disabled">
+              </input>
+          </div>
 
-            <div>
-                <button class="update">Cập nhập thông tin</button>
+          
+          <div id="footer-user">
+              <button class="update">Cập nhập thông tin</button>
 
-            </div>
+              <div class="button-back">
+                  <button type="button">Quay lại trang chủ</button>
+  
+              </div>
+          </div>
 
-            <div class="button-back">
-                <button type="button">Quay lại trang chủ</button>
-
-            </div>
-        </form>
-    </div>
+      </form>
+  </div>
 </section>
-    `
+  `
   ,
-feedback :
-`
+  feedback:
+    `
   <div class="container">
       <div class="row">
-          <div class="col-3">
-          </div>
+          
           <div id="body-report" class="col-8">
               <div>
+              <h1 class="gop-y">Góp ý</h1>
+              
                   <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
+                      <b for="exampleInputEmail1">Địa chỉ email</b>
                       <input type="email" class="form-control" id="email-report" aria-describedby="emailHelp" placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                          else.</small>
+                      <div id="email-error" class="error"></div>
                   </div>
                   <div class="form-group">
-                      <label for="exampleInputPassword1">Nội dung</label>
-                      <input id="content-report" type="text">
+                      <b for="exampleInputPassword1">Nội dung</b>
+                      <textarea rows="4" id="content-report" type="text"></textarea>
+                      <div id="content-error" class="error"></div>
                   </div>
-
-                  <button id="submit-report" type="submit" class="btn btn-primary">Submit</button>
+                  <p class="icon-chuky">(っ◔◡◔)っ ♥ FS ♥</p>
+                  <div class="chu-ky">
+                  <button id="submit-report" type="submit" class="btn btn-primary">Gửi</button>
+                  </div>
+                  
               </div>            
           </div>
-          <div class="col-3">
-
-          </div>
+          
       </div>
   </div>
   `,
+  footer:
+    `
+    <footer id="footer">
+    <ul id="list-footer">
+      <li>Chính sách bảo mật</li>
+      <li>Quy chế hoạt động</li>
+      <li>Chính sách trả hàng và hoàn tiền</li>
+      <li>Giới thiệu Flash Sale</li>
+    </ul>
+    
+    <div id="list-ketnoi">
+    <span>Kết nối với chúng tôi</span>   
+    <div id="doc">
+    <a href="https://www.facebook.com/pvc.cuong97">pvc.cuong97</a>
+      <a href="https://www.facebook.com/le.trunghieu.83">le.trunghieu.83</a>
+    
+    
+      </div>
+      <a id='donate' href="https://firebasestorage.googleapis.com/v0/b/flash-sale-503a4.appspot.com/o/103934416_267398624324499_4426595228627271614_n.jpg?alt=media&token=d8e87ece-5571-44ae-ae52-ef0218ce5647"> Ủng hộ chúng tôi</a>
+    
+    </div>
+  </footer>
+  `
 };
