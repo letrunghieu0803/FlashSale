@@ -1,21 +1,31 @@
+// window.onload = function(){
+//   let mainA = document.querySelector(".abc");
+//  console.log(mainA);
+// let db = firebase.firestore();
+//   db.collection("test")
+//   .where("user", "==", "haha")
+//   .orderBy("id")
+//   .get()
+//   .then(function (querySnapshot) {
+//     querySnapshot.forEach(function (doc) {
+//       console.log("a");
+//       let mainContent = document.createElement("div");
+//       mainContent.className = "intro-new-feed intro2";
+//       let data = doc.data();
+//       mainContent.innerHTML = `  
+//             <div class ='information-post'>
+//             <span class="title-css">Tieu De</span>
+//             <label for="introduce">Mô Tả:</label>    
+//             <p name="introduce" class="intro-view">${data.data}</p>
+//             <label for="">ID:</label>
+//             <div class='category'>${data.id}</div>
+//             <div class="custom-div-end">
+//                 <button >Xem Thêm</button>         
+//             </div>
+//         `;
+//       console.log(mainContent);
+//       mainA.appendChild(mainContent);
+//     });
+//   });
 
-window.onload = async function () {
-  let myform = document.getElementById("myform");
-  console.log(myform)
-  myform.onsubmit= function(event){
-    event.preventDefault();
-    // Change to your service ID, or keep using the default service
-    let service_id = "default_service";
-    let template_id = "template_4LscTQSN";
-    emailjs.sendForm(service_id,template_id,myform[0])
-      .then(function(){ 
-        alert("Sent!");
-         
-      }, function(err) {
-         alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-         
-      });
-    return false;
-  };
-  
-}
+// }

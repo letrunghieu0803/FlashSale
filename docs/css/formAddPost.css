@@ -60,3 +60,61 @@
   justify-content: flex-end;
 
 }
+
+
+h1{
+  padding-top: 15px;
+  text-align: center;
+}
+
+
+.content-detail-seller {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  background-color: #e3e3e3;
+  height: 80vh;
+}
+
+
+#main-content-intro{
+  display: flex;
+  background-color: #ffffff;
+  height: 70vh;
+  
+}
+
+#main-content-intro > #intro-deco {
+  width: 30%;
+}
+
+#intro-page-img{
+  background-position: center center;
+  background-size: cover;
+}
+
+#intro-content > *{
+  margin-top: 5px;
+}
+
+#intro-content{
+padding-left: 10px;
+}
+
+#footer-intropage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  color: ivory;
+  background-image: url(https://fixlab.vn/wp-content/uploads/2019/10/hinh-nen-may-tinh-thien-nhien-dep-kich-thuoc-lon-24.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 20vh;
+}
+
+#footer-intropage > p {
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}

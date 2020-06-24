@@ -7,14 +7,19 @@
     font-family: "Open Sans", sans-serif;
 }
 
-html {
+/* html {
     background: #E9EBEE;
-}
+} */
 
 span {
-    font-size: 20px;
+    font-size: 18px;
 }
-
+label {
+    font-weight: bold;
+}
+h1{
+    font-size: 28px;
+}
 .nav {
     display: flex;
     width: 100%;
@@ -135,7 +140,7 @@ span {
     width: 100%;
     overflow-y: auto;
     height: calc(100vh - 60px);
-    background: #E9EBEE;
+    background: #ffffff;
 }
 
 .contain>.non-contain {
@@ -147,6 +152,7 @@ span {
     display: flex;
     justify-content: space-between;
     width: 80%;
+    padding-top: 20px;
     /* height: 100vh; */
 }
 
@@ -156,7 +162,7 @@ span {
 
 .main-contain>.category {
     top : 15%;
-    height: 70vh;
+    height: 50vh;
     width: 12%;
     flex-direction: column;
     position: fixed;
@@ -211,24 +217,22 @@ span {
 }
 
 .intro-new-feed {
-    margin: 10px 0px;
-    background: #ffffff;
+    border: solid 7px #e3e3e3 ;
     padding: 0 10px;
 }
 
-.intro-new-feed>* {
-    padding-top: 5px;
-}
+
 
 .intro-new-feed>p {
     word-break: break-word;
 }
 
 .title-css {
-    font-size: 26px;
-}
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;}
 
-#more-info{
+.more-info{
     color: blue;
 }
 
@@ -389,7 +393,7 @@ span {
 a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .input-bDay>input {
@@ -591,17 +595,35 @@ justify-content: space-between;
 
 #footer {
     width: 100%;
-    height: 100px;
+    height: 150px;
     display: flex;
+    background: repeating-linear-gradient(0, #0a78cd, #02e1e0);
+    /* background-image: repeating-linear-gradient(0, #0a78cd, #02e1e0); */
+}
+#footer > #deco-footer {
+    display: flex;
+    width: 15%;
     flex-direction: column;
-    background-image: repeating-linear-gradient(0, #0a78cd, #02e1e0);
+    justify-content: space-evenly;
+}
+#footer > #deco-footer > .font-deco {
+    font-size: 40px;
+    padding-left: 20px;
+    color: #025461
 }
 
-#footer>#list-footer {
+#footer > #content-footer {
+    width: 85%;
+    display: flex;
+    flex-direction: column ;
+}
+
+#footer>#content-footer > #list-footer {
     display: flex;
     justify-content: space-evenly;
     color: white;
-    margin-top: 10px;
+    align-items: center;
+    height: 40%;
 }
 
 
@@ -614,23 +636,29 @@ justify-content: space-between;
 #list-ketnoi {
     display: flex;
     align-items: center;
-    margin: 0 12%;
+    justify-content: space-evenly;
+    height: 60%;
 }
-
+li{
+    /* height: 10px; */
+    width: 168px;
+}
 #list-ketnoi>span {
     margin-right: 20px;
 }
 
-#list-ketnoi>#donate {
-    margin-left: 40%;
-}
+/* #list-ketnoi>#donate {
+    /* margin-left: 40%; */
+ */
 
 #doc {
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
 }
 #doc>a{
-    color: #ff0000;
+    color: #025461; 
+    font-size: 15px;
 }
 
 #list-ketnoi>* {
@@ -722,4 +750,74 @@ justify-content: space-between;
 #detail-main{
     display: flex;
     flex-direction: column;
+}
+
+
+
+/* them moi */
+.intro2{
+    display :flex !important;
+    /* flex-direction: column; */
+}
+
+.div-img {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 220px;
+}
+
+.information-post{
+    font-size: 15px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 225px);
+}
+
+.information-post > * {
+    margin-left:  10px;
+    margin-top: 5px;
+}
+
+.information-post > p {
+    padding-left: 10px;
+}
+
+.img-intro2 {
+    margin-top: 5px;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    box-sizing: border-box;
+    background-position: center center;
+}
+
+.more-info{
+    min-width: 20px;
+    max-width: 100px;
+    height: auto;
+}
+
+.intro-view{
+    max-height: 20%;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-div-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.category2{
+    display: flex ;
+}
+
+.category2 > p {
+    padding-left: 10px;
+}
+.font-small {
+    /* font-style: italic; */
+    font-size: 13px;
 }

@@ -6,12 +6,14 @@ const view = {
       case "home": {
         app.innerHTML = components.nav + components.home + components.footer;
         await controller.showNewsFeed();
-        let currentEmail = localStorage.getItem('currentEmail')
+        let currentEmail = localStorage.getItem("currentEmail");
         // view.saveDatatoStorage('currentEmail',currentEmail)
         controller.queryBasic();
         controller.clickNewFeed();
         controller.searchWithCategory();
-        controller.searchWithUserUse(currentEmail)
+        controller.searchWithUserUse(currentEmail);
+        controller.footerAction()
+        
         break;
       }
 
@@ -23,7 +25,7 @@ const view = {
       }
       case "addPost": {
         app.innerHTML = components.nav + components.addPost;
-       let currentUser = localStorage.getItem('currentEmail')
+        let currentUser = localStorage.getItem("currentEmail");
         controller.postForm(currentUser);
         controller.queryBasic();
         break;
@@ -35,7 +37,8 @@ const view = {
       }
 
       case "login": {
-        app.innerHTML =components.nav + components.login;
+        app.innerHTML = components.nav + components.login;
+        controller.queryBasic();
 
         const link = document.querySelector(".a");
 
@@ -67,23 +70,31 @@ const view = {
 
         break;
       }
+      case "introPage": {
+        app.innerHTML =
+          components.nav + components.introPage + components.footer;
+        controller.queryBasic();
+        controller.navStateChange();
+        break;
+      }
 
       case "user": {
         app.innerHTML = components.nav + components.user;
-        controller.queryBasic()
+        controller.queryBasic();
         const buttonback = document.querySelector(".button-back");
         buttonback.onclick = function () {
           view.showScreen("home");
         };
-        let email = view.getDataFromStorage('userEmail')
-        let name = view.getDataFromStorage('userDisplayName')
+        let email = view.getDataFromStorage("currentEmail");
+        let name = view.getDataFromStorage("currentDisplayName");
         // console.log(email, name)
-        controller.showUserInformations(email,name)
-        controller.updateUserInformations()
+        controller.showUserInformations(email, name);
+        controller.updateUserInformations();
         break;
       }
       case "register": {
         app.innerHTML = components.nav + components.register;
+        controller.queryBasic();
 
         const link = document.querySelector(".a");
         link.onclick = function () {
@@ -148,29 +159,24 @@ const view = {
 
         break;
       }
-      case 'feedback' : {
-        app.innerHTML = components.nav + components.feedback
-        controller.queryBasic()
-        controller.feedBackForm()
+      case "feedback": {
+        app.innerHTML = components.nav + components.feedback;
+        controller.queryBasic();
+        controller.feedBackForm();
         break;
       }
-  
     }
   },
 
-  
   saveCurrentView: function (name) {
     localStorage.setItem("currentView", name);
   },
 
-  saveDatatoStorage: function (key,data) {
+  saveDatatoStorage: function (key, data) {
     localStorage.setItem(key, data);
   },
 
-  getDataFromStorage: function(key) {
-    return localStorage.getItem(key)
-  }
-
-  
-
+  getDataFromStorage: function (key) {
+    return localStorage.getItem(key);
+  },
 };

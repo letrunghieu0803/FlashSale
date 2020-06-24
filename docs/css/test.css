@@ -1,17 +1,50 @@
-<<<<<<< HEAD
+.intro-new-feed{
+    display :flex;
+    border: solid 1px black;
+}
 
-.nav-right {
+.div-img {
+    border: solid 1px black;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    width: 220px;
+    padding: 5px;
+}
+
+.information-post{
+    border: solid 1px black;
     display: flex;
     flex-direction: column;
-=======
-.form-add-post{
-    visibility: hidden;
+    justify-content: space-between;
+    width: 60%;
 }
-#test-button{
-    height: 20px;
-    width: 20px;
+
+.information-post > * {
+    margin-left:  10px;
+    margin-top: 5px;
 }
-.contain {
-    background-color: aqua;
->>>>>>> 34ef7b9ec11497e0a075e4108a7e44fb1cbb84c7
+
+.img-intro {
+    
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    box-sizing: border-box;
+    background-position: center center;
+}
+
+.more-info{
+    min-width: 20px;
+    max-width: 100px;
+    height: auto;
+}
+
+.intro-view{
+    max-height: 20%;
+}
+
+.custom-div-end{
+    display: flex;
+    justify-content: flex-end;
 }

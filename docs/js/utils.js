@@ -1,13 +1,5 @@
 const utils = {
-  getDataFromDoc(doc) {
-    let data = doc.data()
-    data.id = doc.id
-  
-    return data
-  },
-  getDataFromDocs(docs) {
-    return docs.map(utils.getDataFromDoc)
-  },
+
   validate(condition, queryErrorTag, messageError) {
     if(condition) {
       document.querySelector(queryErrorTag).innerHTML = ''

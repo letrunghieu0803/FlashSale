@@ -6,10 +6,15 @@ function init(){
   if(currentView){
     view.showScreen(currentView)
     switch(currentView){
-      case 'search':
+      case 'search': {
         let currentData = localStorage.getItem('keySearch')
        
         controller.showSearchPage(currentData)
+        break;
+
+      }
+      case 'detail':
+        
         break;
     }
   } else{
@@ -18,7 +23,10 @@ function init(){
   
 }
 
-window.addEventListener("beforeunload", function(event) {
-  localStorage.removeItem('currentView')
-  event.returnValue = "Write something clever here..";
-});
+// window.close() = outit
+// function outit(){
+//   localStorage.removeItem("currentUser")
+//   localStorage.removeItem("currentEmail")
+//   localStorage.removeItem("currentDisplayName")
+//   localStorage.removeItem("currentView")
+// }

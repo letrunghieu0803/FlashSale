@@ -30,7 +30,7 @@ const components = {
           <div class="time-category">
             <span>Thời gian</span>
             <div class="category-detail hover-cursor">Thời gian cố định</div>
-            <div class="category-detail hover-cursor">Thời gian có hạn</div>
+            <div class="category-detail hover-cursor">Thời gian theo hạn</div>
           </div>
           <div class="place-category">
             <span>Địa điểm</span>
@@ -40,7 +40,7 @@ const components = {
           </div>
         </div>
         <div class="new-feed">
-          <span> Bài đăng mới </span>
+              <h1>Bài đăng mới</h1>
           
           
         </div>
@@ -103,7 +103,7 @@ const components = {
           <div class="time-form-add" id="time-form-add">
           <span>Thời gian:</span>
           <input type="radio" name="time" value="Thời gian cố định"> Thời gian cố định
-          <input type="radio" name="time" value="Thời gian có hạn"> Thời gian có hạn
+          <input type="radio" name="time" value="Thời gian theo hạn"> Thời gian theo hạn
         </div>
         
         <div id="time-error2" class="error"></div>
@@ -313,26 +313,126 @@ const components = {
       </div>
   </div>
   `,
+  introPage: 
+  `
+  <div class="content-detail-seller">
+  <h1>Giới thiệu FlashSale</h1>
+  <div class="entry-content">
+    <div id='main-content-intro'>
+      <div id="intro-deco">
+        <img id='intro-page-img'src="https://i.pinimg.com/originals/fe/df/98/fedf9824a6ff2de7b56a6edcc47ff9ab.jpg" alt="">
+      </div>
+      <div id="intro-content">
+        <p>
+          Mục tiêu của FlashSale là sẽ trở thành thị trường thông tin mua
+          bán trực tuyến tiện ích hàng đầu Việt Nam. Mục đích của FlashSale
+          là cho phép người mua và người bán tìm kiếm, đăng tải thông tin,
+          kết nối an toàn, dễ dàng trong một môi trường tiện lợi và rõ ràng.
+        </p>
+        <p>
+          Không giống các trang khác, trên trang của chúng tôi, những hạng
+          mục sản phẩm liên quan tới thời gian, và ở đây đặc biệt là "có
+          hạn"! Tất nhiên, sản phẩm nào mà chả có hạn thời gian sử dụng,
+          nhưng chúng tôi chia hạn thời gian này thành 2 mục, đó là : hết
+          hạn vẫn có thể sử dụng và hết hạn không thể sử dụng.
+        </p>
+
+        <p>
+          Hêt hạn có thể sử dụng? Là những sản phẩm ví như đồ ăn quá hạn
+          vậy. Bạn có thể sử dụng tiếp chúng trong tiếp 1 khoảng thời gian
+          lâu hay ngắn thì không biết. Nhưng!!! Vị hay chất lượng của nó thì
+          chúng tôi cá chắc rằng sẽ rất tệ đó! Hay như chiếc ti vi có hạn sử
+          dụng cỡ 10 năm thì sẽ có nguy cơ hỏng, quảng cáo là vậy nhưng tùy
+          theo mức sử dụng, chúng ta đã có một khoảng thời gian dùng nó khác
+          rồi!
+        </p>
+        <p>
+          Đó không phải là thứ chúng thôi nhắm đến. Thứ chúng tôi hướng đến
+          là loại còn lại - sản phẩm một khi hết hạn sẽ không tài nào sử
+          dụng được nữa. Ví như chiếc vé máy bay, nó đã có sự ấn định ngày
+          sử dụng, bạn không dùng -> bạn mất nó. Hay như chiếc thẻ thành
+          viên tập gym của bạn, bạn có một khoảng thời gian dài thật dài để
+          sử dụng nó đi chăng nữa, qua hạn ngày cuối dù chỉ 1 ngày bạn cũng
+          chả thể nào sử dụng nữa. Đại loại đến đây chắc bạn cũng hình dung
+          được một số đặc điểm khác nhau của 2 loại vật phẩm "có hạn" này.
+          Nhưng đó chưa hẳn là 100% mục tiêu của trang chúng tôi!
+        </p>
+
+        <p>
+          Như đã đề cập ở trên, nó là 1 trang trực tuyến tiện ích, chữ tiện
+          ích này cũng chiếm đến 50% lý do chúng tôi xây dựng web này. "Tiện
+          ích" này không hẳn là gì đó quá cao siêu. Đơn giản là nó chính là
+          sự tiện nghi, đơn giản với người dùng. Và người dùng ở đây chúng
+          tôi nhắm đến chính là những người sở hữu những món đồ "hết hạn
+          không thể sử dụng" còn thời gian sử dụng được mà không có nhu cầu
+          sử dụng nữa. Sao lại vậy? Chỉ là chúng tôi thấy thực sự lãng phí
+          khi bạn có một chiếc vé đi du lịch, nhưng trước đó vài ngày bạn
+          lại dính phải sự cố không đi được nữa -> bạn cần pass lại nó; bạn
+          mới có một chiếc thẻ thành viên tập gym 6 tháng tại một địa điểm
+          A, nhưng vì lý do bạn phải chuyển nơi B xa nơi A, không còn tập
+          được nữa -> bạn cũng nên pass lại!...
+        </p>
+        <p>
+          Đó đó đó! Chúng tôi nhắm tới những người có nhu cầu pass lại những
+          vật phẩm đó và những người có nhu cầu sử dụng lại chúng! Thật
+          tuyệt biết bao khi có một nơi để phục vụ những nhu cầu đó - nhỏ lẻ
+          nhưng chi tiết và cần thiết!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="footer-intropage">
+      <p>
+        Mỗi người trong số chúng ta đều có những sản phẩm có thể bán được. Bên
+        cạnh việc giữ sản phẩm không cần đến ở nhà, bất kỳ ai cũng có thể kiếm
+        thêm tiền bằng cách bán nó cho người khác thông qua thị trường mua bán
+        trực tuyến này.
+      </p>
+      <p>
+        Sản phẩm mà bạn không cần đến vẫn có thể trở thành vật quý giá với
+        người khác. Đừng do dự mà hãy gửi thông tin về sản phẩm của bạn ngay
+        bây giờ!
+      </p>
+
+    </div>
+  `
+  ,
   footer:
     `
     <footer id="footer">
-    <ul id="list-footer">
-      <li>Chính sách bảo mật</li>
-      <li>Quy chế hoạt động</li>
-      <li>Chính sách trả hàng và hoàn tiền</li>
-      <li>Giới thiệu Flash Sale</li>
-    </ul>
-    
-    <div id="list-ketnoi">
-    <span>Kết nối với chúng tôi</span>   
-    <div id="doc">
-    <a href="https://www.facebook.com/pvc.cuong97">pvc.cuong97</a>
-      <a href="https://www.facebook.com/le.trunghieu.83">le.trunghieu.83</a>
-    
-    
+    <div id="deco-footer">
+      <p class='font-deco' >♥ FS ♥</p>
+      <p class='font-deco' >(っ◔◡◔)っ</p>
+    </div>
+    <div id="content-footer">
+      <ul id="list-footer">
+        <li id="linkIntroPage">
+          Giới thiệu Flash Sale
+        </li>
+        <li>
+          <a>Quy chế hoạt động</a>
+        </li>
+        <li>
+          <a>Chính sách bảo mật</a>
+        </li>
+      </ul>
+      
+      <div id="list-ketnoi">
+      <li id='donate'>
+      <a  href="https://firebasestorage.googleapis.com/v0/b/flash-sale-503a4.appspot.com/o/103934416_267398624324499_4426595228627271614_n.jpg?alt=media&token=d8e87ece-5571-44ae-ae52-ef0218ce5647"> Ủng hộ chúng tôi</a>
+      </li>
+      <div>
+        <li>Hỗ trợ trực tiếp:</li>   
+        <div id="doc">
+          <a href="https://www.facebook.com/pvc.cuong97">Phan Cương</a>
+          <a href="https://www.facebook.com/le.trunghieu.83">Trung Hiếu</a>
+        </div>
       </div>
-      <a id='donate' href="https://firebasestorage.googleapis.com/v0/b/flash-sale-503a4.appspot.com/o/103934416_267398624324499_4426595228627271614_n.jpg?alt=media&token=d8e87ece-5571-44ae-ae52-ef0218ce5647"> Ủng hộ chúng tôi</a>
-    
+      <li>
+        Group FaceBook
+      </li>
+      </div>
     </div>
   </footer>
   `
