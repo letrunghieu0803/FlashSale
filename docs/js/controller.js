@@ -304,11 +304,10 @@ const controller = {
       try{
         let storageRef = firebase.storage().ref("anh" + file.name);
         mvp = storageRef.put(file);
-        buttonPost.removeAttribute("disabled");
       }
       catch(error){
         alert('Vui lòng điền đủ thông tin và ảnh!')
-      buttonPost.removeAttribute("disabled");
+        buttonPost.removeAttribute("disabled");
         
         console.log(error)
       }
@@ -338,52 +337,53 @@ const controller = {
                 postObject.title,
                 "#title-error",
                 "Chưa nhập tên sản phẩm!"
-              ),
-              utils.validate(
-                postObject.description,
-                "#description-error",
-                "Chưa nhập mô tả sản phẩm!"
-              ),
-              utils.validate(
-                postObject.deadTime,
-                "#time-error",
-                "Chưa nhập thời hạn cho sản phẩm!"
-              ),
-              utils.validate(
-                postObject.area,
-                "#area-error",
-                "Chưa chọn vùng Miền!"
-              ),
-              utils.validate(
-                postObject.time,
-                "#time-error2",
-                "Chưa chọn loại Thời hạn!"
-              ),
-              utils.validate(
-                postObject.placeUse,
-                "#placeUse-error",
-                "Chưa nhập địa chỉ cụ thể sử dụng sản phẩm !"
-              ),
-              utils.validate(
-                postObject.price,
-                "#price-error",
-                "Chưa nhập giá sản phẩm !"
-              ),
-              utils.validate(
-                postObject.contact,
-                "#contact-error",
-                "Chưa nhập phương thức liên lạc!"
-              ),
-            ];
-            if (utils.allPassed(validateResult)) {
-              await firebase.firestore().collection("posts").add(postObject);
-              try {
-                alert("Bạn đã đăng bài thành công! Nhấn OK để về Trang chủ");
-                view.showScreen("home");
-                
-              } catch (error) {}
-            }
-          });
+                ),
+                utils.validate(
+                  postObject.description,
+                  "#description-error",
+                  "Chưa nhập mô tả sản phẩm!"
+                  ),
+                  utils.validate(
+                    postObject.deadTime,
+                    "#time-error",
+                    "Chưa nhập thời hạn cho sản phẩm!"
+                    ),
+                    utils.validate(
+                      postObject.area,
+                      "#area-error",
+                      "Chưa chọn vùng Miền!"
+                      ),
+                      utils.validate(
+                        postObject.time,
+                        "#time-error2",
+                        "Chưa chọn loại Thời hạn!"
+                        ),
+                        utils.validate(
+                          postObject.placeUse,
+                          "#placeUse-error",
+                          "Chưa nhập địa chỉ cụ thể sử dụng sản phẩm !"
+                          ),
+                          utils.validate(
+                            postObject.price,
+                            "#price-error",
+                            "Chưa nhập giá sản phẩm !"
+                            ),
+                            utils.validate(
+                              postObject.contact,
+                              "#contact-error",
+                              "Chưa nhập phương thức liên lạc!"
+                              ),
+                            ];
+                            if (utils.allPassed(validateResult)) {
+                              await firebase.firestore().collection("posts").add(postObject);
+                              try {
+                                alert("Bạn đã đăng bài thành công! Nhấn OK để về Trang chủ");
+                                view.showScreen("home");
+                                
+                              } catch (error) {}
+                            }
+                            buttonPost.removeAttribute("disabled");
+                          });
         }
       );
     });
