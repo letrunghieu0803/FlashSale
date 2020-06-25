@@ -42,9 +42,12 @@ const controller = {
         e
       ) {
         e.preventDefault();
-        let key = newFeed[i].children[1].children[4].innerHTML;
-        // let key = introduce.replace("Mô tả : ", "");
-        await controller.catchKey("description", "==", key);
+        let a = newFeed[i].children[1].children[2].innerHTML ;
+        console.log(a)
+
+        // let key = newFeed[i].children[1].children[4].innerHTML;
+        let key = a.replace("Ngày đăng: ", "");
+        await controller.catchKey("createdAt", "==", key);
       };
     }
     view.saveDatatoStorage("searchWith", "category");
