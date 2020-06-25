@@ -300,14 +300,16 @@ const controller = {
     buttonPost.addEventListener("click", async function (event) {
       event.preventDefault();
       buttonPost.setAttribute("disabled", true);
-      buttonPost.removeAttribute("disabled");
       let mvp = null
       try{
         let storageRef = firebase.storage().ref("anh" + file.name);
         mvp = storageRef.put(file);
+        buttonPost.removeAttribute("disabled");
       }
       catch(error){
         alert('Vui lòng điền đủ thông tin và ảnh!')
+      buttonPost.removeAttribute("disabled");
+        
         console.log(error)
       }
       await mvp.on(
