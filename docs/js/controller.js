@@ -278,7 +278,7 @@ const controller = {
             firebase.auth().currentUser.updateProfile({
               displayName: formUser.name.value,
             });
-            view.saveDatatoStorage("userDisplayName", formUser.name.value);
+            view.saveDatatoStorage("currentDisplayName", formUser.name.value);
             view.showScreen("user");
           });
         });
